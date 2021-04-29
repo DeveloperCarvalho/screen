@@ -1,0 +1,77 @@
+variables:
+  TEMPLATE_VERSION: '1.8.2'
+
+include:
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/.und-udb-creation.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/.micro-arch-analysis.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/.macro-arch-analysis.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/security/container-scan/.container-scanning.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/security/dependency-scan/.dependency-scanning.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.sonar-analysis.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.common.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.build.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.lint.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.audit.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.test.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.docker-publishing.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.changelog.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.pages.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.npm-publish.yml
+  - remote: https://git-unj.softplan.com.br/enterprise-devops/ci-templates/raw/1.8.2/templates/react/.updating.yml
+
+stages:
+  - build
+  - lint
+  - test
+  - preparation
+  - kaloi
+  - publish
+  - container-scan
+  - changelog
+  - updating
+  - pages
+
+build:
+  extends: .template:react:build
+
+lint:
+  extends: .template:react:lint
+
+dependency-scanning:
+  extends: .template:dependency-scan-javascript
+  stage: lint
+  variables:
+    FAIXA_SELECIONADA: azul
+
+audit:
+  extends: .template:react:audit
+
+test:
+  extends: .template:react:test
+
+und-udb-creation:
+  extends: .template:und-udb-creation
+
+sonar:analyze:preview:
+  extends: .template:sonar-analysis-preview
+
+sonar:analyze:
+  extends: .template:sonar-analysis
+
+micro-arch-analysis:
+  extends: .template:micro-arch-analysis
+
+macro-arch-analysis-publishing:
+  extends: .template:macro-arch-analysis-publishing-generic
+
+publish:
+  extends: .template:react:npm-publish
+
+changelog:
+  extends: .template:react:changelog
+
+pages:
+  extends: .template:react:page
+
+updating:
+  extends: .template:react:updating

@@ -1,0 +1,47 @@
+{
+  "name": "@screen/teste-screen",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "bayon-scripts-lib start",
+    "build": "bayon-scripts-lib build",
+    "lint": "bayon-scripts-lib lint",
+    "test": "bayon-scripts-lib test",
+    "doc": "bayon-scripts-docs start",
+    "doc:build": "bayon-scripts-docs build",
+    "coverage": "bayon-scripts-lib test --coverage"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "react-router-dom": "5.2.0",
+    "@bayon/commons": "3.8.2",
+    "@bayon/svg-icons": "3.1.1",
+    "@bayon/smarts": "0.36.9",
+    "@bayon/scripts": "0.28.16",
+    "@bayon/core": "0.28.16",
+    "@testing-library/react": "11.2.5"
+  },
+  "peerDependencies": {},
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "publishConfig": {
+    "registry": "https://artifactory.softplan.com.br/artifactory/api/npm/unjcommons-npm-release-local/"
+  }
+}

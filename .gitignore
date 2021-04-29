@@ -1,0 +1,120 @@
+# dependencies
+.pnp
+.pnp.js
+node_modules/
+jspm_packages/
+bower_componets/
+
+# TypeScript v1 declaration files
+typings/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Credentials (npm and yarn)
+.npmrc
+.yarnrc
+
+# Optional eslint cache
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# testing
+lib-cov
+coverage
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# documentation
+.docz
+.documentation
+
+# production
+build/
+dist/
+icons/
+
+# next.js build output
+.next
+/out/
+
+# dotenv environment variables file
+.env
+.env.test
+
+# misc
+.DS_*
+*.pem
+**/*.backup.*
+**/*.back.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports (https://nodejs.org/api/report.html)
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# DynamoDB Local files
+.dynamodb/
+
+# FuseBox cache
+.fusebox/
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+
+# Cypress
+cypress/screenshots
+cypress/videos
+
+# vercel
+.vercel
+
+# VisualStudioCode Patch
+.history
+
+# Understands
+*.udb
+artifacts/
+
+# Other
+my-app*
+.idea/
+*.sublime*
+psd
+thumb
+sketch
+Thumbs.db
+package-lock.json
+*environment.js
+**/*/sw.js
+**/*/swConnection.js
+

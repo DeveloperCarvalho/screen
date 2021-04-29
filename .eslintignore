@@ -1,0 +1,10 @@
+.gitlab
+.documentation
+.npm
+.storybook
+.vscode
+dist
+build
+coverage
+config-pipeline
+node_modules
