@@ -1,0 +1,6 @@
+{
+	"CountClassCoupled": 20, 
+	"CountDeclMethod": 30, 
+	"MaxInheritanceTree": 2, 
+	"PercentLackOfCohesion": 50
+}

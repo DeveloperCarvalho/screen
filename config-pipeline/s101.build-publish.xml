@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<headless version="1.0">
+  <operations>
+    <operation type="publish">
+      <argument name="diagrams" value="true"/>
+      <argument name="overwrite" value="false"/>
+    </operation>
+  </operations>
+  <arguments>
+    <argument name="local-project" value="const(THIS_FILE)/s101.gen.hsp"></argument>
+  </arguments>
+</headless>

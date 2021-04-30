@@ -1,0 +1,40 @@
+{
+    "File": [
+        {
+            "xMetric": "CountStmt",
+            "yMetric": "MaxCyclomaticModified",
+            "ballMetric": "MaxNesting",
+            "xMetricMinValue": 100,
+            "yMetricMinValue": 10,
+            "ballMetricMinValue": 0
+        }
+    ],
+    "Class": [
+        {
+            "xMetric": "CountStmt",
+            "yMetric": "CountClassCoupled",
+            "ballMetric": "PercentLackOfCohesion",
+            "xMetricMinValue": 100,
+            "yMetricMinValue": 10,
+            "ballMetricMinValue": 0
+        }
+    ],
+    "Routine": [
+        {
+            "xMetric": "CountStmt",
+            "yMetric": "CyclomaticModified",
+            "ballMetric": "MaxNesting",
+            "xMetricMinValue": 10,
+            "yMetricMinValue": 5,
+            "ballMetricMinValue": 1
+        },
+        {
+            "xMetric": "CountStmt",
+            "yMetric": "Cyclomatic",
+            "ballMetric": "MaxNesting",
+            "xMetricMinValue": 10,
+            "yMetricMinValue": 5,
+            "ballMetricMinValue": 1
+        }
+    ]    
+}

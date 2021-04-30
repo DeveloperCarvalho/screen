@@ -1,0 +1,13 @@
+{
+  "AVG:CountParams": 2,
+  "CountParams": 8,
+  "Cyclomatic": 30,
+  "MEDIAN:Cyclomatic": 1,
+  "STDEV:Cyclomatic": 2,
+  "CountStmt": 120,
+  "STDEV:CountStmt": 16,
+  "MEDIAN:CountStmt": 3,
+  "CyclomaticModified": 15,
+  "MEDIAN:CyclomaticModified": 1,
+  "STDEV:CyclomaticModified": 2
+}
